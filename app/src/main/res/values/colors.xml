@@ -11,7 +11,7 @@
     <color name="light_sage">#ffb8e986</color>
     <color name="banana_yellow">#fff9ec4f</color>
 
-    <!-- Colors used by ViewPager as background colors -->
+    <!-- Colors used by PageAdapter as background colors -->
     <array name="viewPagerColors">
         <item>#ffde3c50</item>
         <item>#ff9b9b9b</item>
