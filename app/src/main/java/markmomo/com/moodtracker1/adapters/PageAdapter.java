@@ -1,8 +1,10 @@
-package markmomo.com.moodtracker1;
+package markmomo.com.moodtracker1.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import markmomo.com.moodtracker1.models.SmileyFragment;
 
 /**
  * Created by markm On 11/03/2019.
@@ -11,7 +13,7 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     //Array of colors that will be passed to SmileyFragment
     private int[] colors;
-    private int mMaintIconsColor;
+    private int mMainIconsColor;
 
     //Personalized Constructor
     public PageAdapter(FragmentManager mgr, int[] colors) {
@@ -20,7 +22,7 @@ public class PageAdapter extends FragmentPagerAdapter {
     }
     // Getter
     public int getMainIconsColor() {
-        return mMaintIconsColor;
+        return mMainIconsColor;
     }
 
     @Override
@@ -31,7 +33,7 @@ public class PageAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         //get color for MainActivity Icons
-        mMaintIconsColor = position;
+        mMainIconsColor = position;
         //age Content to return
         return(SmileyFragment.newInstance(position, this.colors[position]));
     }
