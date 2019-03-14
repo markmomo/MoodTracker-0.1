@@ -13,10 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -28,9 +28,9 @@
             android:id="@+id/act_history_day7_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button7IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +43,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -58,9 +58,9 @@
             android:id="@+id/act_history_day6_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button6IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,10 +73,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -88,9 +88,9 @@
             android:id="@+id/act_history_day5_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button5IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,10 +103,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -118,9 +118,9 @@
             android:id="@+id/act_history_day4_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button4IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,10 +133,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -148,9 +148,9 @@
             android:id="@+id/act_history_day3_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button3IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -163,10 +163,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -178,9 +178,9 @@
             android:id="@+id/act_history_day2_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button2IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"
@@ -193,10 +193,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/banana_yellow">
+        android:background="@color/myGrey">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -208,9 +208,9 @@
             android:id="@+id/act_history_day1_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/banana_yellow"
+            android:background="@color/myGrey"
             android:onClick="button1IsClicked"
             android:src="@drawable/ic_comment_black_48px"
             app:layout_constraintEnd_toEndOf="parent"

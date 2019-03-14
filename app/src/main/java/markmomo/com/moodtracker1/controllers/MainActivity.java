@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     //Start HistoryActivity
     public void historyIconIsClicked(View view) {
         Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+        updateMoods();
+        intent.putIntegerArrayListExtra("moods history",moods);
         startActivity(intent);
     }
 
@@ -185,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
         if (moods == null || moods.isEmpty()) {
             moods = new ArrayList<>();
             moods.add(0,3);
+            while (moods.size() != 8){
+                moods.add(-1);
+            }
         }
     }
 }
