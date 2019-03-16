@@ -28,7 +28,7 @@ public class HistoryActivity extends AppCompatActivity {
         ArrayList<Integer> moodsHistory;
 
         Intent intent = getIntent ();
-        moodsHistory = intent.getIntegerArrayListExtra("moods history");
+        moodsHistory = intent.getIntegerArrayListExtra("mMoods history");
 
         mDay1Left = findViewById(R.id.act_history_day1);
         mDay2Left = findViewById(R.id.act_history_day2);
