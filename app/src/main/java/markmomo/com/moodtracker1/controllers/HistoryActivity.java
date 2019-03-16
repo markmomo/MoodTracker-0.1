@@ -10,26 +10,27 @@ import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import markmomo.com.moodtracker1.R;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    private ArrayList<ImageButton> mButtons;
+    private ArrayList<ConstraintLayout> mCstLayouts;
     private @ColorRes int mColor;
-
-    private ConstraintLayout mDay1Left,mDay2Left,mDay3Left,mDay4Left,mDay5Left,mDay6Left,mDay7Left;
-    private ImageButton mButton1,mButton2,mButton3,mButton4,mButton5,mButton6,mButton7;
+    private ArrayList<String> mNotes;
+    private ArrayList<Integer> mMoods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        ArrayList<Integer> moodsHistory;
-
-        Intent intent = getIntent ();
-        moodsHistory = intent.getIntegerArrayListExtra("mMoods history");
-
+        //INITIALIZATION LAYOUTS AND WIDGETS
+        ImageButton mButton1,mButton2,mButton3,mButton4,mButton5,mButton6,mButton7;
+        ConstraintLayout mDay1Left,mDay2Left,mDay3Left,mDay4Left,mDay5Left,mDay6Left,mDay7Left;
         mDay1Left = findViewById(R.id.act_history_day1);
         mDay2Left = findViewById(R.id.act_history_day2);
         mDay3Left = findViewById(R.id.act_history_day3);
@@ -37,7 +38,6 @@ public class HistoryActivity extends AppCompatActivity {
         mDay5Left = findViewById(R.id.act_history_day5);
         mDay6Left = findViewById(R.id.act_history_day6);
         mDay7Left = findViewById(R.id.act_history_day7);
-
         mButton1 = findViewById(R.id.act_history_day1_Btn);
         mButton2 = findViewById(R.id.act_history_day2_Btn);
         mButton3 = findViewById(R.id.act_history_day3_Btn);
@@ -45,44 +45,56 @@ public class HistoryActivity extends AppCompatActivity {
         mButton5 = findViewById(R.id.act_history_day5_Btn);
         mButton6 = findViewById(R.id.act_history_day6_Btn);
         mButton7 = findViewById(R.id.act_history_day7_Btn);
+        mCstLayouts = new ArrayList<>();
+        mCstLayouts.add(mDay1Left);mCstLayouts.add(mDay2Left);mCstLayouts.add(mDay3Left);mCstLayouts.add(mDay4Left);
+        mCstLayouts.add(mDay5Left);mCstLayouts.add(mDay6Left);mCstLayouts.add(mDay7Left);
+        mButtons = new ArrayList<>();
+        mButtons.add(mButton1);mButtons.add(mButton2);mButtons.add(mButton3);mButtons.add(mButton4);
+        mButtons.add(mButton5);mButtons.add(mButton6);mButtons.add(mButton7);
 
+        //load data from MainActivity
+        Intent intent = getIntent ();
+        mMoods = intent.getIntegerArrayListExtra("mMoods history");
+        mNotes = intent.getStringArrayListExtra("mNotes history");
 
-        //display good color and good size on the good line
+        //display management of history colors, sizes, and icons.
         for (int i = 0; i < 7; i++){
-            displayHistory(moodsHistory.get(i+1), i+1);
+            displayHistory(mMoods.get(i+1), i+1);
         }
+        noteIconIsDisplayed ();
     }
 
     public void button7IsClicked(View view){
+        Toast.makeText(this, mNotes.get(7), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button7IsClicked: ");
     }
     public void button6IsClicked(View view){
+        Toast.makeText(this, mNotes.get(6), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button6IsClicked: ");
     }
     public void button5IsClicked(View view){
+        Toast.makeText(this, mNotes.get(5), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button5IsClicked: ");
     }
     public void button4IsClicked(View view){
+        Toast.makeText(this, mNotes.get(4), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button4IsClicked: ");
     }
     public void button3IsClicked(View view){
+        Toast.makeText(this, mNotes.get(3), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button3IsClicked: ");
     }
     public void button2IsClicked(View view){
+        Toast.makeText(this, mNotes.get(2), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button2IsClicked: ");
     }
     public void button1IsClicked(View view){
+
+        Toast.makeText(this, mNotes.get(1), Toast.LENGTH_SHORT).show();
         Log.e("HistoryActivity Button", "button1IsClicked: ");
     }
 
     private void displayHistory (int moodNumber, int position) {
-        ArrayList<ConstraintLayout> dayLine = new ArrayList<>();
-        dayLine.add(mDay1Left);dayLine.add(mDay2Left);dayLine.add(mDay3Left);dayLine.add(mDay4Left);
-        dayLine.add(mDay5Left);dayLine.add(mDay6Left);dayLine.add(mDay7Left);
-
-        ArrayList<ImageButton> buttonLine = new ArrayList<>();
-        buttonLine.add(mButton1);buttonLine.add(mButton2);buttonLine.add(mButton3);buttonLine.add(mButton4);
-        buttonLine.add(mButton5);buttonLine.add(mButton6);buttonLine.add(mButton7);
 
         switch (moodNumber){
             case 0 :
@@ -106,25 +118,25 @@ public class HistoryActivity extends AppCompatActivity {
         //choose the color and size on the child of activity_history LinearLayout
         switch (position) {
             case 1:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 2:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 3:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 4:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 5:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 6:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
                 break;
             case 7:
-                chooseWidthAndColor(moodNumber,dayLine.get(position-1),buttonLine.get(position-1));
+                chooseWidthAndColor(moodNumber,mCstLayouts.get(position-1),mButtons.get(position-1));
         }
     }
 
@@ -154,6 +166,16 @@ public class HistoryActivity extends AppCompatActivity {
         }
         constraint.setBackgroundColor(getResources().getColor(mColor));
         imgButton.setBackgroundColor(getResources().getColor(mColor));
+    }
+
+    private void noteIconIsDisplayed (){
+
+        for (int i = 1; i < 8; i++){
+
+            if (mNotes.get(i).length() < 1) {
+                mButtons.get(i-1).setVisibility(View.GONE);
+            }
+        }
     }
 }
 

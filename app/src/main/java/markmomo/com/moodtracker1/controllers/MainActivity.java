@@ -38,7 +38,12 @@ public class MainActivity extends AppCompatActivity {
     public void onHistoryIconClicked(View view) {
         Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
         updateMoodsAndNotes();
+        saveMoodsData();
+        loadMoodsData();
+        saveNotesData();
+        loadNotesData();
         intent.putIntegerArrayListExtra("mMoods history",mMoods);
+        intent.putStringArrayListExtra("mNotes history", mNotes);
         startActivity(intent);
     }
 
