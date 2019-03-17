@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import markmomo.com.moodtracker1.R;
 import markmomo.com.moodtracker1.adapters.PageAdapter;
+import markmomo.com.moodtracker1.adapters.VerticalViewPager;
 import markmomo.com.moodtracker1.receivers.AlarmReceiver;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String DAY_COUNTER = "DAY_COUNTER";
     private ArrayList<Integer> mMoods;
     private ArrayList<String> mNotes;
-    private ViewPager mViewPager;
+    private VerticalViewPager mViewPager;
     private EditText mNoteBox;
 
     //Start HistoryActivity
